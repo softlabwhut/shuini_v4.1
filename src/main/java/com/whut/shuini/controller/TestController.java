@@ -12,4 +12,10 @@ public class TestController {
     public String test(){
         return "shuini project start!";
     }
+
+    @RequestMapping(value = "/hello")
+    @ResponseBody
+    public String hello_test(){
+        return "shuini project hello!";
+    }
 }
