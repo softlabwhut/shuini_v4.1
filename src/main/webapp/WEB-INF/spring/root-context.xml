@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<!-- Load properties from file -->
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+		<property name="ignoreResourceNotFound" value="true" />
+		<property name="fileEncoding" value="UTF-8"/>
+		<property name="locations">
+			<list>
+				<!-- Database properties -->
+				<value>classpath:config/jdbc.properties</value>
+				<value>classpath:config/hikari.properties</value>
+				<!-- Third party info -->
+				<value>classpath:config/shuini.properties</value>
+			</list>
+		</property>
+	</bean>
+
+    
+	<context:component-scan base-package="com.whut.shuini.bean" />
+    <!--bean class="games.easing.duodao.bean.Result" /-->
+    <!-- zhanyitang-common UniExceptionHandler -->
+    <!--<bean class="com.xing.zhanyitang.infrastructure.exception.UniExceptionHandler"/>-->
+    <!-- zhanyitang-common ContextRefreshListener -->
+    <!--<bean class="com.xing.zhanyitang.infrastructure.listener.ContextRefreshListener"/>-->
+</beans>
