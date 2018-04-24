@@ -15,7 +15,7 @@ class Reg extends Component {
             [target.name]: target.value
         })
     }
-    saveUser() {
+    loginUser() {
         const {
             username,
             password
@@ -25,10 +25,10 @@ class Reg extends Component {
     }
     render() {
         return (
-            <div onChange={(e)=>this.stateChange(e)}>
+            <div onChange={(e)=>this.stateChange(e)} >
                 <input name="username" value={this.state.username} placeholder="请输入用户名"/>
                 <input name="password" value={this.state.password} placeholder="请输入密码"/>
-                <button onClick={()=>this.saveUser()} >登录</button>
+                <button onClick={()=>this.loginUser()} >登录</button>
                 <a href='reg'><button >注册</button></a>
                 {this.props.children}
             </div>

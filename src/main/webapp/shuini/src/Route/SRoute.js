@@ -8,7 +8,6 @@ import Admin_app from '../adminComponent/Admin_app';
 import TestA from '../TestA';
 import UserAdd from '../pages/UserAdd';
 import Home from '../pages/Home';
-import MyAjax from '../api/MyAjax';
 import MyFetch from '../api/MyFetch';
 
 
@@ -25,7 +24,7 @@ export default class SRoute extends Component {
                 <Route path="/user/add" component={UserAdd}/>
                 <Route path="/fetch" component={MyFetch}/>
                 <Route path="/!" component={TestA}/>
-                <Route path="/ajax" component={MyAjax}/>
+               
 
             </Router>
         )
