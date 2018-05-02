@@ -26,17 +26,17 @@
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving 
 		up static resources in the ${webappRoot}/resources directory -->
-	<resources mapping="/js/**" location="/js/" />
+	<resources mapping="/js/**" location="/shuini/" />
 	<resources mapping="/css/**" location="/shuini/" />
-	<resources mapping="/image/**" location="/image/" />
-	<resources mapping="/pages/**" location="/pages/" />
-	<resources mapping="/assets/**" location="/assets/" />
+	<!--<resources mapping="/image/**" location="/image/" />-->
+	<!--<resources mapping="/pages/**" location="/pages/" />-->
+	<!--<resources mapping="/assets/**" location="/assets/" />-->
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
 		in the /WEB-INF/views directory -->
 	<beans:bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<beans:property name="prefix" value="/pages/" />
+		<beans:property name="prefix" value="/shuini/build/" />
 		<beans:property name="suffix" value=".html" />
 		<beans:property name="contentType" value="text/html" />
 		<beans:property name="order" value="1" />
