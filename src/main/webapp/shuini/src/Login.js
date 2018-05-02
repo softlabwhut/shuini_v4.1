@@ -6,9 +6,7 @@
  */
 import React from 'react';
 import {Component} from 'react';
-import ReactDOM from 'react-dom';
 import { Form, Input, Button, Checkbox } from 'antd';
-import { Link } from 'react-router';
 //import { confirm } from 'jquery';
 const FormItem = Form.Item;
 
