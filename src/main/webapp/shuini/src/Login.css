@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.login .login-form {
+    max-width: 300px;
+    margin: auto auto;
+    margin-top: 20%;
+}
+.login-form-forgot {
+    float: right;
+}
+.login-form-button {
+    width: 100%;
+}
+.remember{
+    float:left;
+}
+.login {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    background-image: url(./img/call-to-action-bg.jpg);
+
+}
+#pleaseLogin{
+    text-align: center;
+}
